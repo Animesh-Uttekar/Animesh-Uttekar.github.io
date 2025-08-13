@@ -14,8 +14,8 @@ import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 import { fadeUp, staggerContainer, chipContainer, chipItem } from '../motion/variants';
 
 const About = () => {
-  const skills = ['Python', 'FastAPI', 'OpenAI', 'PostgreSQL', 'AWS', 'TypeScript', 'React', 'Node.js', 'Docker', 'Java', 'Spring Boot'];
-
+  const skills = ['Python', 'FastAPI', 'OpenAI', 'TypeScript', 'React', 'AWS'];
+  const skills_2 = [ 'PostgreSQL', 'Node.js', 'Docker', 'Java', 'Spring Boot'];
   return (
     <Box component="section" id="about" sx={{ py: 12, bgcolor: 'grey.50' }}>
       <Container maxWidth="lg">
@@ -48,7 +48,7 @@ const About = () => {
                 lineHeight: 1.6
               }}
             >
-              I turn problems into solutions. Worked at startups, love building things that actually work. Clean code, thoughtful design and real results.
+              I turn messy ideas into clean code. Corporate world taught me to think big, startup life taught me to move fast.
             </Typography>
           </Box>
         </motion.div>
@@ -97,6 +97,33 @@ const About = () => {
                       <Chip 
                         label={skill}
                         variant="filled"
+                        sx={{
+                          minWidth: '80px',
+                          height: '36px',
+                          fontSize: '0.875rem',
+                          fontWeight: 500,
+                          justifyContent: 'center'
+                        }}
+                      />
+                    </motion.div>
+                  ))}
+                </Box>
+                <Box mt={2} sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
+                  {skills_2.map((skill) => (
+                    <motion.div
+                      key={skill}
+                      variants={chipItem}
+                    >
+                      <Chip 
+                        label={skill}
+                        variant="filled"
+                        sx={{
+                          minWidth: '80px',
+                          height: '36px',
+                          fontSize: '0.875rem',
+                          fontWeight: 500,
+                          justifyContent: 'center'
+                        }}
                       />
                     </motion.div>
                   ))}
@@ -112,7 +139,13 @@ const About = () => {
               whileInView="animate"
               viewport={{ once: true }}
             >
-              <Card elevation={1} sx={{ p: 4 }}>
+              <Card 
+                elevation={1} 
+                sx={{ 
+                  p: 4,
+                  background: 'linear-gradient(135deg,rgb(250, 250, 250) 50%,rgb(242, 242, 242) 80%)'
+                }}
+              >
                 <CardContent sx={{ p: 0 }}>
                   <Typography 
                     variant="h4" 
@@ -141,8 +174,13 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ 
-                        bgcolor: 'grey.100',
-                        '&:hover': { bgcolor: 'grey.200' }
+                        bgcolor: 'rgba(255,255,255,0.9)',
+                        backdropFilter: 'blur(10px)',
+                        '&:hover': { 
+                          bgcolor: 'rgba(255,255,255,1)',
+                          transform: 'translateY(-2px)'
+                        },
+                        transition: 'all 0.3s ease'
                       }}
                     >
                       <GitHub sx={{ color: 'text.primary' }} />
@@ -152,20 +190,30 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ 
-                        bgcolor: 'grey.100',
-                        '&:hover': { bgcolor: 'grey.200' }
+                        bgcolor: 'rgba(255,255,255,0.9)',
+                        backdropFilter: 'blur(10px)',
+                        '&:hover': { 
+                          bgcolor: 'rgba(255,255,255,1)',
+                          transform: 'translateY(-2px)'
+                        },
+                        transition: 'all 0.3s ease'
                       }}
                     >
-                      <LinkedIn sx={{ color: 'text.primary' }} />
+                      <LinkedIn sx={{ color: '#0077b5' }} />
                     </IconButton>
                     <IconButton 
                       href="mailto:animeshuttekar98@gmail.com" 
                       sx={{ 
-                        bgcolor: 'grey.100',
-                        '&:hover': { bgcolor: 'grey.200' }
+                        bgcolor: 'rgba(255,255,255,0.9)',
+                        backdropFilter: 'blur(10px)',
+                        '&:hover': { 
+                          bgcolor: 'rgba(255,255,255,1)',
+                          transform: 'translateY(-2px)'
+                        },
+                        transition: 'all 0.3s ease'
                       }}
                     >
-                      <Email sx={{ color: 'text.primary' }} />
+                      <Email sx={{ color: '#ea4335' }} />
                     </IconButton>
                   </Box>
                 </CardContent>
