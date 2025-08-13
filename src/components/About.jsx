@@ -48,7 +48,7 @@ const About = () => {
                 lineHeight: 1.6
               }}
             >
-              I turn messy ideas into clean code. Corporate world taught me to think big, startup life taught me to move fast.
+              I turn messy ideas into clean code. Corporate world taught me to think big, startup life taught me to ship fast.
             </Typography>
           </Box>
         </motion.div>
