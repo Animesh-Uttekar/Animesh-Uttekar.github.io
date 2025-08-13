@@ -5,7 +5,15 @@ import { fadeUp } from '../motion/variants';
 
 const Navigation = () => {
   return (
-    <AppBar position="fixed" elevation={0}>
+    <AppBar 
+      position="fixed" 
+      elevation={0}
+      sx={{
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backdropFilter: 'blur(6px)',
+        border: 'none',
+      }}
+    >
       <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
         <motion.div
           variants={fadeUp}
